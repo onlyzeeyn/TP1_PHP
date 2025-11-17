@@ -4,10 +4,10 @@ function double_boucle($n) {
         for ($j = 1; $j <= $i; $j++) {
             echo $i;
         }
-        echo "\n";
+        echo "<br>"; // <--- saute la ligne dans le navigateur
     }
 }
 
 // Test avec 5
 double_boucle(5);
-?>
+?
