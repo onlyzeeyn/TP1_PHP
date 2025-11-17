@@ -10,4 +10,4 @@ function double_boucle($n) {
 
 // Test avec 5
 double_boucle(5);
-?
+?>
