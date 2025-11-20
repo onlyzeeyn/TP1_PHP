@@ -1,10 +1,13 @@
 <?php
-session_start();
+session_start(); 
 
 if (isset($_POST['username'])) {
     $_SESSION['username'] = $_POST['username'];
 }
 
+if (isset($_GET['delete'])) {
+    unset($_SESSION['username']);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +29,8 @@ if (!isset($_SESSION['username'])) {
 
 } else {
     echo "<h2>Bienvenue, " . ($_SESSION['username']) . " !</h2>";
+    
+    echo '<a href="http://localhost/php/exercice.php?delete=1">Réinitialiser</a>';
 }
 
 ?>
